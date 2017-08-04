@@ -35,7 +35,7 @@ class Tags extends REST_Controller {
         if (!empty($tags))
         {
             $this->set_response([
-                'success' => true,
+                'status' => true,
                 'message' => "List of tags",
                 'response' => array('tags' => $tags, 'tags_count' => $tags_count)
             ], REST_Controller::HTTP_OK); // OK (200) being the HTTP response code
@@ -43,7 +43,7 @@ class Tags extends REST_Controller {
         else
         {
             $this->set_response([
-                'success' => false,
+                'status' => false,
                 'message' => 'Tags could not be found'
             ], REST_Controller::HTTP_NOT_FOUND); // NOT_FOUND (404) being the HTTP response code
         }
